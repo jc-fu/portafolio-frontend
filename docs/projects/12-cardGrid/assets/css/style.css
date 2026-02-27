@@ -15,6 +15,7 @@ body{
     min-height: 100vh;
     margin: 0 auto;
     width: 90%;
+    padding: 2rem 0;
 }
 
 .card{
@@ -88,11 +89,15 @@ body{
     }
     .card__content{
         grid-column: 1/-1;
-        grid-row: 5/-1;
+        grid-row: 3/7;
     }
 
     :root{
     --color-primary: #2659e4ed;
+    }
+
+    .card{
+        grid-template-rows: repeat(6,1fr);
     }
 
 }

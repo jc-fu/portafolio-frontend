@@ -346,12 +346,17 @@ body{
 }
 
 @media screen and (max-width:550px){
+
+    :root{
+        --padding-container: 40px 0;
+    }
+
     .hero__picture{
-        width: 85%;
+        width: 100%;
     }
 
     .hero__img{
-        max-width: 100%;
+        width: 100%;
     }
 
     .hero__title{
@@ -393,4 +398,28 @@ body{
         max-width: 330px;
         margin-bottom: 40px;
     }
+    .hero{
+        height: 50vh;
+        min-height: auto;
+    }
+
+
+    .hero__main{
+        height: 100%;
+        flex-flow: column;
+    }
+
+    .hero__figure{
+        flex: 1;
+        order: -1;
+    }
+
+    .hero__text{
+        flex:1;
+    }
+
+    .portfolio__cards{
+        padding: 40px 0 0 0;
+    }
+
 }
