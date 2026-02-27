@@ -52,8 +52,6 @@ body{
     transition: var(--transitionModal);
 }
 
-
-
 .cta{
     text-decoration: none;
     color: #fff;
@@ -102,4 +100,35 @@ body{
 }
 .modal__paragraph{
     font-size: 1.3rem;
+}
+
+@media screen and (max-width:768px) {
+
+    .modal__container{
+        gap: 1rem;
+    }
+    .modal__title{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .modal__texts{
+        grid-column: 1/-1;
+        grid-row: 3/-1;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .modal__img{
+        grid-column: 2/8;
+        grid-row: 1/3;
+    }
+    .modal__paragraph{
+        font-size: 1rem;
+        flex-grow: 1;
+    }
+
+    .cta{
+        width: 10rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
 }
