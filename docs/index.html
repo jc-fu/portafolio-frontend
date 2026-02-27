@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio CSS</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Mi portafolio</h1>
+      <p>Proyectos hechos con HTML, CSS. Haz click en una tarjeta para ver el proyecto.</p>
+    </section>
+
+    <section class="toolbar">
+      <input id="q" class="input" type="search" placeholder="Buscar por nombre, descripción o tag..." />
+      <select id="cat" class="select">
+        <option value="all">Todas las categorías</option>
+        <option value="landing">Landing</option>
+        <option value="ui">UI / Componentes</option>
+        <option value="app">Mini-apps</option>
+      </select>
+    </section>
+
+    <section id="grid" class="grid"></section>
+    <div id="empty" class="empty" hidden>No hay proyectos que coincidan con tu búsqueda.</div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

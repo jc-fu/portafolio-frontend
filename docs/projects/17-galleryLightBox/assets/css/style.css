@@ -1,0 +1,134 @@
+:root{
+    --image-url: url(../img/imagen1.jpg);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 2rem 0;
+    max-width: 1200px;
+}
+
+.title{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: .8rem;
+    border-bottom: purple solid .3rem;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: 300px;
+    grid-auto-rows: 300px;
+    gap: 1rem;
+    position: relative;
+}
+
+.gallery__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.show{
+    transform: translate(0,100%);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.671);
+    top: 0;
+    display: flex;
+    transition: transform .6s;
+}
+
+.show__container{
+    position: relative;
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.show:target{
+    transform: translate(0);
+}
+.show--n1>.show__container{
+    background-image: var(--image-url);
+}
+.show--n2>.show__container{
+    --image-url: url(../img/imagen2.jpg);
+    background-image: var(--image-url);
+}
+
+.show--n3>.show__container{
+    --image-url: url(../img/imagen3.jpg);
+    background-image: var(--image-url);
+}
+
+.show--n4>.show__container{
+    --image-url: url(../img/imagen4.jpg);
+    background-image: var(--image-url);
+}
+
+.show--n5>.show__container{
+    --image-url: url(../img/imagen5.jpg);    
+    background-image: var(--image-url);
+}
+
+.show--n6>.show__container{
+    --image-url: url(../img/imagen6.jpg);
+    background-image: var(--image-url);
+}
+
+.show__close{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    position: absolute;
+    right: -.5rem;
+    top: -.5rem;
+    color: #fff;
+    background-color: crimson;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.gallery__link{
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery__link::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 147, 39, 0.54);
+    position: absolute;
+    transform: scale(0);
+    transition: transform 1s;
+}
+
+.gallery__link:hover::before{
+    transform: scale(1);
+}
+
+
