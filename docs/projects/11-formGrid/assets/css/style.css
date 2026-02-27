@@ -8,8 +8,15 @@
     --color-primary: #5050f0;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Inter', sans-serif;
+    padding-bottom: 3rem;
 }
 
 .contact{
@@ -46,7 +53,7 @@ body{
 .contact__img{
     width: 90%;
     align-items:center;
-
+    display: block;
 }
 
 .contact__form{
@@ -97,6 +104,11 @@ body{
 }
 
 @media screen and (max-width:768px){
+    
+    :root{
+        --clip: polygon(0 0, 0% 100%, 100% 0);;
+    }
+
     .contact{
         --contact-columns: 1fr;
         --contact-rows:1fr 1fr;
@@ -106,6 +118,7 @@ body{
     .contact__picture{
         grid-column: 1/-1;
         grid-row: 1/2;
+        width: 100%;
     }
 
     .contact__form{
@@ -113,5 +126,11 @@ body{
         grid-row: 2/3;
         padding: 0 1.5rem;
     }
+
+    .contact__img{
+        width: 100%;
+        
+    }
+
 
 }
